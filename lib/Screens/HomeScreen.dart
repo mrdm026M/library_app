@@ -114,10 +114,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 250.0,
+                    height: 280.0,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
+                        // first book
                         Container(
                           width: 150.0,
                           margin: EdgeInsets.only(
@@ -125,14 +126,18 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Container(
-                                height: 185.0,
+                                height: 200.0,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
-                                  color: AppColors.ColorGreen,
+                                  image: DecorationImage(
+                                    image:
+                                        new AssetImage("assets/images/1.jpg"),
+                                    fit: BoxFit.fill,
+                                  ),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.grey[900],
-                                      blurRadius: 5,
+                                      color: Colors.grey[600],
+                                      blurRadius: 10,
                                     ),
                                   ],
                                   borderRadius: BorderRadius.all(
@@ -140,16 +145,40 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Book 1',
-                                  textAlign: TextAlign.start,
+                              Container(
+                                padding: EdgeInsets.only(top: 12.50),
+                                width: double.infinity,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 2.0),
+                                      child: Text(
+                                        'Moby Dick',
+                                        style: TextStyle(
+                                          fontFamily: 'Avenir',
+                                          fontSize: 17.5,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Hermen Melville',
+                                      style: TextStyle(
+                                        fontFamily: 'Avenir',
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                         ),
+
+                        // second book
                         Container(
                           width: 150.0,
                           margin: EdgeInsets.only(
@@ -157,14 +186,18 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Container(
-                                height: 185.0,
+                                height: 200.0,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
-                                  color: AppColors.ColorGreen,
+                                  image: DecorationImage(
+                                    image:
+                                        new AssetImage("assets/images/2.jpg"),
+                                    fit: BoxFit.fill,
+                                  ),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.grey[900],
-                                      blurRadius: 5,
+                                      color: Colors.grey[600],
+                                      blurRadius: 10,
                                     ),
                                   ],
                                   borderRadius: BorderRadius.all(
@@ -172,16 +205,40 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Book 2',
-                                  textAlign: TextAlign.start,
+                              Container(
+                                padding: EdgeInsets.only(top: 12.50),
+                                width: double.infinity,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 2.0),
+                                      child: Text(
+                                        'Night Thoughts',
+                                        style: TextStyle(
+                                          fontFamily: 'Avenir',
+                                          fontSize: 17.5,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Sarah Arvio',
+                                      style: TextStyle(
+                                        fontFamily: 'Avenir',
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                         ),
+
+                        // third book
                         Container(
                           width: 150.0,
                           margin: EdgeInsets.only(
@@ -189,14 +246,18 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Container(
-                                height: 185.0,
+                                height: 200.0,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
-                                  color: AppColors.ColorGreen,
+                                  image: DecorationImage(
+                                    image:
+                                        new AssetImage("assets/images/3.jpg"),
+                                    fit: BoxFit.fill,
+                                  ),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.grey[900],
-                                      blurRadius: 5,
+                                      color: Colors.grey[600],
+                                      blurRadius: 10,
                                     ),
                                   ],
                                   borderRadius: BorderRadius.all(
@@ -204,16 +265,40 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Book 3',
-                                  textAlign: TextAlign.start,
+                              Container(
+                                padding: EdgeInsets.only(top: 12.50),
+                                width: double.infinity,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 2.0),
+                                      child: Text(
+                                        'The Girl',
+                                        style: TextStyle(
+                                          fontFamily: 'Avenir',
+                                          fontSize: 17.5,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Kiran Millwood',
+                                      style: TextStyle(
+                                        fontFamily: 'Avenir',
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
                           ),
                         ),
+
+                        // fourth book
                         Container(
                           width: 150.0,
                           margin: EdgeInsets.only(
@@ -221,14 +306,18 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Container(
-                                height: 185.0,
+                                height: 200.0,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
-                                  color: AppColors.ColorGreen,
+                                  image: DecorationImage(
+                                    image:
+                                        new AssetImage("assets/images/4.jpg"),
+                                    fit: BoxFit.fill,
+                                  ),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.grey[900],
-                                      blurRadius: 5,
+                                      color: Colors.grey[600],
+                                      blurRadius: 10,
                                     ),
                                   ],
                                   borderRadius: BorderRadius.all(
@@ -236,11 +325,33 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Book 4',
-                                  textAlign: TextAlign.start,
+                              Container(
+                                padding: EdgeInsets.only(top: 12.50),
+                                width: double.infinity,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 2.0),
+                                      child: Text(
+                                        'The Rambling',
+                                        style: TextStyle(
+                                          fontFamily: 'Avenir',
+                                          fontSize: 17.5,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Jimmy Cajoleas',
+                                      style: TextStyle(
+                                        fontFamily: 'Avenir',
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
