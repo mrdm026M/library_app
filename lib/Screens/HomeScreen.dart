@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:library_app/data/colors.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);
 
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -84,7 +89,9 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
+            // arrival section
             Container(
+              // color: AppColors.ColorBlue,
               padding: EdgeInsets.symmetric(vertical: 20.0),
               width: MediaQuery.of(context).size.width,
               child: Column(
@@ -114,6 +121,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
+                    // color: AppColors.ColorBlue,
                     height: 280.0,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
@@ -123,66 +131,6 @@ class HomeScreen extends StatelessWidget {
                           width: 150.0,
                           margin: EdgeInsets.only(
                               left: 20.0, top: 15.0, right: 10.0, bottom: 10.0),
-                          child: Column(
-                            children: <Widget>[
-                              Container(
-                                height: 200.0,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        new AssetImage("assets/images/1.jpg"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey[600],
-                                      blurRadius: 10,
-                                    ),
-                                  ],
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10.0),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(top: 12.50),
-                                width: double.infinity,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 2.0),
-                                      child: Text(
-                                        'Moby Dick',
-                                        style: TextStyle(
-                                          fontFamily: 'Avenir',
-                                          fontSize: 17.5,
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                      ),
-                                    ),
-                                    Text(
-                                      'Hermen Melville',
-                                      style: TextStyle(
-                                        fontFamily: 'Avenir',
-                                        fontSize: 12.5,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        // second book
-                        Container(
-                          width: 150.0,
-                          margin: EdgeInsets.only(
-                              left: 10.0, top: 15.0, right: 10.0, bottom: 10.0),
                           child: Column(
                             children: <Widget>[
                               Container(
@@ -238,7 +186,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
 
-                        // third book
+                        // second book
                         Container(
                           width: 150.0,
                           margin: EdgeInsets.only(
@@ -298,11 +246,11 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
 
-                        // fourth book
+                        // third book
                         Container(
                           width: 150.0,
                           margin: EdgeInsets.only(
-                              left: 10.0, top: 15.0, right: 20.0, bottom: 10.0),
+                              left: 10.0, top: 15.0, right: 10.0, bottom: 10.0),
                           child: Column(
                             children: <Widget>[
                               Container(
@@ -357,9 +305,112 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                         ),
+
+                        // fourth book
+                        Container(
+                          width: 150.0,
+                          margin: EdgeInsets.only(
+                              left: 10.0, top: 15.0, right: 20.0, bottom: 10.0),
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                height: 200.0,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image:
+                                        new AssetImage("assets/images/1.jpg"),
+                                    fit: BoxFit.fill,
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey[600],
+                                      blurRadius: 10,
+                                    ),
+                                  ],
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(10.0),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(top: 12.50),
+                                width: double.infinity,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 2.0),
+                                      child: Text(
+                                        'Moby Dick',
+                                        style: TextStyle(
+                                          fontFamily: 'Avenir',
+                                          fontSize: 17.5,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Hermen Melville',
+                                      style: TextStyle(
+                                        fontFamily: 'Avenir',
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
+                ],
+              ),
+            ),
+
+            // author section
+            Container(
+              // color: AppColors.ColorGreen,
+              padding: EdgeInsets.only(bottom: 20.0),
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    padding:
+                        EdgeInsets.only(left: 20.0, right: 20.0, bottom: 0.0),
+                    alignment: Alignment.center,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'Top Authors',
+                          style: TextStyle(
+                            fontFamily: "Avernir",
+                            fontSize: 22.5,
+                            fontWeight: FontWeight.w700,
+                            color: AppColors.ColorBlue,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_rounded,
+                          size: 32.5,
+                          color: AppColors.ColorPink,
+                        ),
+                      ],
+                    ),
+                  ),
+                  // Container(
+                  //   height: 280.0,
+                  //   child: ListView(
+                  //     scrollDirection: Axis.horizontal,
+                  //     children: <Widget>[
+                  //     ],
+                  //   ),
+                  // ),
                 ],
               ),
             ),
