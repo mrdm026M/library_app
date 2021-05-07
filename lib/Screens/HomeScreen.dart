@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:library_app/Screens/BookPage.dart';
 import 'package:library_app/data/colors.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -121,68 +122,80 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Container(
-                    // color: AppColors.ColorBlue,
                     height: 280.0,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         // first book
-                        Container(
-                          width: 150.0,
-                          margin: EdgeInsets.only(
-                              left: 20.0, top: 15.0, right: 10.0, bottom: 10.0),
-                          child: Column(
-                            children: <Widget>[
-                              Container(
-                                height: 200.0,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        new AssetImage("assets/images/2.jpg"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey[600],
-                                      blurRadius: 10,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BookPage()),
+                            );
+                          },
+                          child: Container(
+                            width: 150.0,
+                            margin: EdgeInsets.only(
+                                left: 20.0,
+                                top: 15.0,
+                                right: 10.0,
+                                bottom: 10.0),
+                            child: Column(
+                              children: <Widget>[
+                                Container(
+                                  height: 200.0,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image:
+                                          new AssetImage("assets/images/2.jpg"),
+                                      fit: BoxFit.fill,
                                     ),
-                                  ],
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10.0),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey[600],
+                                        blurRadius: 10,
+                                      ),
+                                    ],
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(10.0),
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(top: 12.50),
-                                width: double.infinity,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 2.0),
-                                      child: Text(
-                                        'Night Thoughts',
-                                        style: TextStyle(
-                                          fontFamily: 'Avenir',
-                                          fontSize: 17.5,
-                                          fontWeight: FontWeight.w700,
+                                Container(
+                                  padding: EdgeInsets.only(top: 12.50),
+                                  width: double.infinity,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 2.0),
+                                        child: Text(
+                                          'Night Thoughts',
+                                          style: TextStyle(
+                                            fontFamily: 'Avenir',
+                                            fontSize: 17.5,
+                                            fontWeight: FontWeight.w700,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Text(
-                                      'Sarah Arvio',
-                                      style: TextStyle(
-                                        fontFamily: 'Avenir',
-                                        fontSize: 12.5,
-                                        fontWeight: FontWeight.w500,
+                                      Text(
+                                        'Sarah Arvio',
+                                        style: TextStyle(
+                                          fontFamily: 'Avenir',
+                                          fontSize: 12.5,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
 
@@ -343,7 +356,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       padding:
                                           const EdgeInsets.only(bottom: 2.0),
                                       child: Text(
-                                        'Moby Dick',
+                                        'We Hunt Flame',
                                         style: TextStyle(
                                           fontFamily: 'Avenir',
                                           fontSize: 17.5,
@@ -352,7 +365,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                     ),
                                     Text(
-                                      'Hermen Melville',
+                                      'Hafsah Faizal',
                                       style: TextStyle(
                                         fontFamily: 'Avenir',
                                         fontSize: 12.5,
@@ -372,7 +385,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            // author section
+            // book list section
             Container(
               // color: AppColors.ColorGreen,
               padding: EdgeInsets.only(bottom: 20.0),
@@ -382,35 +395,37 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container(
                     padding:
                         EdgeInsets.only(left: 20.0, right: 20.0, bottom: 0.0),
-                    alignment: Alignment.center,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text(
-                          'Top Authors',
-                          style: TextStyle(
-                            fontFamily: "Avernir",
-                            fontSize: 22.5,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.ColorBlue,
-                          ),
-                        ),
-                        Icon(
-                          Icons.arrow_forward_rounded,
-                          size: 32.5,
-                          color: AppColors.ColorPink,
-                        ),
-                      ],
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Best Ever Book List',
+                      style: TextStyle(
+                        fontFamily: "Avernir",
+                        fontSize: 22.5,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.ColorBlue,
+                      ),
                     ),
                   ),
-                  // Container(
-                  //   height: 280.0,
-                  //   child: ListView(
-                  //     scrollDirection: Axis.horizontal,
-                  //     children: <Widget>[
-                  //     ],
-                  //   ),
-                  // ),
+                  Container(
+                    margin: EdgeInsets.only(top: 15.0, left: 20.0, right: 20.0),
+                    height: 165.0,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: new AssetImage("assets/images/5.jpg"),
+                        fit: BoxFit.fill,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey[300],
+                          blurRadius: 10,
+                        ),
+                      ],
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
